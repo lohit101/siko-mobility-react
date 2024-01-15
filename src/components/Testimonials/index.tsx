@@ -10,9 +10,9 @@ interface Props {
 
 const Testimonials: React.FC<Props> = ({heading, subheading, date, name}) => {
     return (
-        <div className="flex flex-col items-center justify-center py-5 px-10 bg-[url('./Section.png')] bg-cover bg-no-repeat bg-center">
-            <p className="m-5 my-10 text-5xl font-bold max-w-[50%] text-center">Ils nous ont fait confiance À votre tour !</p>
-            <div className="grid grid-cols-3 gap-5 w-9/12">
+        <div className="flex flex-col items-center justify-center py-5 px-5 sm:px-10 bg-[url('./Section.png')] bg-cover bg-no-repeat bg-center">
+            <p className="m-5 my-10 text-3xl sm:text-5xl font-bold w-full text-start sm:text-center sm:w-1/2">Ils nous ont fait confiance À votre tour !</p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 w-full sm:w-9/12">
                 <Testimonial heading="Recommandation sincére" subheading="Tres bonne expérience, tres accueillant et a I'écoute. Je recommande pour les solutions de financement 😁😁" date="2023-09-19" name="Kevin" />
                 <Testimonial heading="Prestation excellente" subheading="Top , Je recommande Siko Mobility pour leur professionnalisme . Tristan D’Halluin et au top trés a ’écoute du client. 👌" date="2023-09-11" name="Quentin Berthe" />
                 <Testimonial heading="Recommandation sincére" subheading="Tres bonne expérience, tres accueillant et a I'écoute. Je recommande pour les solutions de financement 😁😁" date="2023-09-19" name="Kevin" />

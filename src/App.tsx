@@ -12,7 +12,7 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen w-screen">
       <Navbar />
       <Header />
       <Services image='' heading='' subheading='' />

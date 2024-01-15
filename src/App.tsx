@@ -1,24 +1,26 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/Navbar';
+import Header from './components/Header';
+import Services from './components/Services';
+import Testimonials from './components/Testimonials';
+import Banner from './components/Banner';
+import Benefits from './components/Benefits';
+import BannerSmall from './components/BannerSmall';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-h-screen">
+      <Navbar />
+      <Header />
+      <Services image='' heading='' subheading='' />
+      <Testimonials heading='' subheading='' date='' name='' />
+      <Banner />
+      <Benefits icon='' heading='' subheading='' />
+      <BannerSmall />
+      <Footer />
     </div>
   );
 }

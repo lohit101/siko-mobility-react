@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
     };
 
     return (
-        <header className="flex flex-wrap sm:justify-start sm:flex-nowrap w-full bg-white text-sm py-4 sticky top-0 shadow-md z-10">
+        <header className="flex flex-wrap sm:justify-start sm:flex-nowrap w-full bg-white border border-gray-300 text-sm py-5 sticky top-0 z-10">
             <nav className="max-w-[85rem] w-full mx-auto px-4 flex flex-wrap basis-full items-center justify-between" aria-label="Global">
                 <a className="sm:order-1 flex-none text-xl font-semibold" href="#">
                     <img src={Logo} />
@@ -28,16 +28,16 @@ const Navbar: React.FC = () => {
                             <path d="m6 6 12 12"/>
                         </svg>
                     </button>
-                    <button type="button" className="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-full border border-blue-500 bg-white text-blue-500 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none">
+                    <button type="button" className="py-2 px-3 inline-flex items-center gap-x-2 text-base font-medium rounded-full border-2 border-blue-500 bg-white text-blue-500 shadow-sm hover:bg-blue-500 hover:text-white disabled:opacity-50 disabled:pointer-events-none transition-all">
                         Simulation
                     </button>
                 </div>
                 <div id="navbar-alignment" className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:grow-0 sm:basis-auto sm:block sm:order-2">
                     <div className="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:mt-0 sm:ps-5">
-                        <a className="font-medium text-gray-600 hover:text-blue-500" href="#">Espace Marchand</a>
-                        <a className="font-medium text-gray-600 hover:text-blue-500" href="#">Nos services</a>
-                        <a className="font-medium text-gray-600 hover:text-blue-500" href="#">Contact</a>
-                        <a className="font-medium text-gray-600 hover:text-blue-500" href="#">FAQ</a>
+                        <a className="text-base font-medium text-gray-600 hover:text-blue-500" href="#">Espace Marchand</a>
+                        <a className="text-base font-medium text-gray-600 hover:text-blue-500" href="#">Nos services</a>
+                        <a className="text-base font-medium text-gray-600 hover:text-blue-500" href="#">Contact</a>
+                        <a className="text-base font-medium text-gray-600 hover:text-blue-500" href="#">FAQ</a>
                     </div>
                 </div>
             </nav>

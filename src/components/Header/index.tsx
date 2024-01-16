@@ -13,12 +13,12 @@ const Header: React.FC = () => {
             </div>
             <div className="flex flex-row gap-5">
                 <img src={Image2} className='hidden sm:block w-20 h-20' />
-                <h2 className="text-4xl sm:text-6xl font-bold">Electric Mobility</h2>
+                <h2 className="text-4xl sm:text-6xl font-bold capitalize">Mobilité électrique</h2>
                 <img src={Image3} className='hidden sm:block w-20 h-20' />
             </div>
-            <h2 className="text-4xl sm:text-6xl font-bold">One-Stop-Shop For Professionals</h2>
-            <p className="text-2xl my-5">Financing, insurance, maintenance and warranty.</p>
-            <button className="bg-blue-500 text-white py-2 px-5 rounded-full">Our Service for all Mobility &#129123;</button>
+            <h2 className="text-4xl sm:text-6xl font-bold capitalize">guichet unique pour les professionnels</h2>
+            <p className="text-2xl my-5">Financement, Assurance, Entretien Et Garantie.</p>
+            <button className="bg-blue-500 text-white py-2 px-5 rounded-full">Notre Service Pour Toutes Les Mobilités &#129123;</button>
         </div>
     )
 }

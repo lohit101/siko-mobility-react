@@ -5,7 +5,7 @@ import Image3 from './image 3.png';
 
 const Header: React.FC = () => {
     return (
-        <div className="flex flex-col items-start sm:items-center justify-center px-5 gap-2 min-h-[80vh] bg-[url('./Section.png')] bg-cover bg-no-repeat">
+        <div className="flex flex-col items-start sm:items-center justify-center px-5 gap-2 min-h-[60vh] sm:min-h-[80vh] bg-[url('./Section.png')] bg-cover bg-no-repeat">
             <div className="flex flex-row">
                 <img src={Image1} className='w-20 h-20' />
                 <img src={Image2} className='block sm:hidden w-20 h-20' />

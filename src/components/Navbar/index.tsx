@@ -2,70 +2,46 @@ import React from 'react';
 import Logo from './logo.png';
 
 const Navbar: React.FC = () => {
-    return (
-        // <div className="bg-white w-full flex flex-row items-center justify-between py-5 px-10 sticky top-0 z-10 shadow-md">
-        //     <div className="navLeft">
-        //         <img src={Logo} alt="Siko Mobility" />
-        //     </div>
-        //     <div className="navMiddle">
-        //         <ul className='flex flex-row gap-5'>
-        //             <li>Espace Marchand</li>
-        //             <li>Nos services</li>
-        //             <li>Contact</li>
-        //             <li>FAQ</li>
-        //         </ul>
-        //     </div>
-        //     <div className="navRight">
-        //         <button className='text-blue-500 border-2 border-blue-500 rounded-full py-1 px-5 transition-all hover:bg-blue-500 hover:text-white'>Simulation</button>
-        //     </div>
-        // </div>
+    const handleClick = (event: React.MouseEvent<HTMLElement>) => {        
+        if (document.getElementById('navbar-alignment')?.classList.contains('hidden')) {
+            document.getElementById('navbar-alignment')?.classList.replace('hidden', 'flex');
+        } else {
+            document.getElementById('navbar-alignment')?.classList.replace('flex', 'hidden');
+        }
+    };
 
-        <nav className="bg-white shadow-md py-3">
-            <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-                <div className="relative flex h-16 items-center justify-between">
-                <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                    <button type="button" className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
-                    <span className="absolute -inset-0.5"></span>
-                    <span className="sr-only">Open main menu</span>
-                    <svg className="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                    </svg>
-                    <svg className="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
+    return (
+        <header className="flex flex-wrap sm:justify-start sm:flex-nowrap w-full bg-white text-sm py-4">
+            <nav className="max-w-[85rem] w-full mx-auto px-4 flex flex-wrap basis-full items-center justify-between" aria-label="Global">
+                <a className="sm:order-1 flex-none text-xl font-semibold" href="#">
+                    <img src={Logo} />
+                </a>
+                <div className="sm:order-3 flex items-center gap-x-2">
+                    <button onClick={handleClick} id='toggleBtn' type="button" className="sm:hidden hs-collapse-toggle p-2.5 inline-flex justify-center items-center gap-x-2 rounded-lg bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none" data-hs-collapse="#navbar-alignment" aria-controls="navbar-alignment" aria-label="Toggle navigation">
+                        <svg className="hs-collapse-open:hidden flex-shrink-0 w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="3" x2="21" y1="6" y2="6"/>
+                            <line x1="3" x2="21" y1="12" y2="12"/>
+                            <line x1="3" x2="21" y1="18" y2="18"/>
+                        </svg>
+                        <svg className="hs-collapse-open:block hidden flex-shrink-0 w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 6 6 18"/>
+                            <path d="m6 6 12 12"/>
+                        </svg>
+                    </button>
+                    <button type="button" className="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-full border border-blue-500 bg-white text-blue-500 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none">
+                        Simulation
                     </button>
                 </div>
-                <div className="hidden sm:flex flex-shrink-0 items-center">
-                    <img className="h-8 w-auto" src={Logo} alt="Your Company" />
-                </div>
-                <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-center">
-                    <div className="hidden sm:ml-6 sm:block">
-                        <div className="flex space-x-4">
-                            <a href="#" className="text-gray-500 hover:text-blue-500 rounded-md px-3 py-2 text-sm font-medium transition-all">Team</a>
-                            <a href="#" className="text-gray-500 hover:text-blue-500 rounded-md px-3 py-2 text-sm font-medium transition-all">Projects</a>
-                            <a href="#" className="text-gray-500 hover:text-blue-500 rounded-md px-3 py-2 text-sm font-medium transition-all">Calendar</a>
-                        </div>
+                <div id="navbar-alignment" className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:grow-0 sm:basis-auto sm:block sm:order-2">
+                    <div className="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:mt-0 sm:ps-5">
+                        <a className="font-medium text-gray-600 hover:text-blue-500" href="#">Espace Marchand</a>
+                        <a className="font-medium text-gray-600 hover:text-blue-500" href="#">Nos services</a>
+                        <a className="font-medium text-gray-600 hover:text-blue-500" href="#">Contact</a>
+                        <a className="font-medium text-gray-600 hover:text-blue-500" href="#">FAQ</a>
                     </div>
                 </div>
-                <div className="flex sm:hidden flex-shrink-0 items-center">
-                    <img className="h-8 w-auto" src={Logo} alt="Your Company" />
-                </div>
-                <div className="absolute inset-y-0 right-0 hidden sm:flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                    <div className="relative ml-3">
-                        <button className='text-blue-500 border-2 border-blue-500 rounded-full py-1 px-5 transition-all hover:bg-blue-500 hover:text-white'>Simulation</button>
-                    </div>
-                </div>
-                </div>
-            </div>
-
-            <div className="sm:hidden" id="mobile-menu">
-                <div className="px-2 pb-3 pt-2">
-                <a href="#" className="text-gray-500 hover:bg-blue-500 hover:text-white block rounded-md px-3 py-1 text-sm">Team</a>
-                <a href="#" className="text-gray-500 hover:bg-blue-500 hover:text-white block rounded-md px-3 py-1 text-sm">Projects</a>
-                <a href="#" className="text-gray-500 hover:bg-blue-500 hover:text-white block rounded-md px-3 py-1 text-sm">Calendar</a>
-                </div>
-            </div>
             </nav>
+        </header>
     )
 }
 

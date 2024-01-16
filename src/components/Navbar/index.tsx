@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
     };
 
     return (
-        <header className="flex flex-wrap sm:justify-start sm:flex-nowrap w-full bg-white text-sm py-4">
+        <header className="flex flex-wrap sm:justify-start sm:flex-nowrap w-full bg-white text-sm py-4 sticky top-0 shadow-md z-10">
             <nav className="max-w-[85rem] w-full mx-auto px-4 flex flex-wrap basis-full items-center justify-between" aria-label="Global">
                 <a className="sm:order-1 flex-none text-xl font-semibold" href="#">
                     <img src={Logo} />

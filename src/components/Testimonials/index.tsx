@@ -20,7 +20,7 @@ const Testimonials: React.FC<Props> = ({heading, subheading, date, name}) => {
                 <Testimonial heading="Professionnalisme au top" subheading="Société trés professionnel,et réactive Tres bonne communication" date="2023-09-15" name="Rak" />
                 <Testimonial heading="Super expérience" subheading="Sérieux, a I'écoute et trés disponible je recommande fortement cette entreprise les yeux fermés !!!" date="2023-09-18" name="Wady Talhaoui" />
                 <Testimonial heading="Merci pour l'aide" subheading="Merciii pour I assistance apporter de I équipe et aux employer qui sont a I écoute et font tout pour nous aider merci encor et a bientot" date="2023-09-19" name="Kevin" />
-                <Testimonial heading="Service incroyable " subheading="Je recommande a 100%. En quelques mots : Rapide, efficace et c’est un plaisir d’échanger avec eux par téléphone 😊" date="2023-09-14" name="Manelle BC" />
+                <Testimonial heading="Service incroyable " subheading="Je recommande a 100%. En quelques mots : Rapide, efficace et c’est un plaisir d’échanger avec eux par téléphone 😊" date="2023-09-14" name="Manelle BCxit" />
                 <Testimonial heading="Aide inestimable" subheading="Excellente expérience humaine vécue avec Tristan de Siko qui me guidera sur chaques routes I Merci encore J 🙏" date="2023-09-17" name="Youssouf SANOGO" />
             </div>
         </div>
